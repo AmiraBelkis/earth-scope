@@ -1,0 +1,126 @@
+[
+    {
+        "testName": "valid map request",
+        "request": {
+            "regionId": "southAmerica",
+            "categoriesList": [
+                "severeStorms"
+            ],
+            "sourcesList": [
+                "InciWeb",
+                "EO",
+                "AVO",
+                "JTWC"
+            ],
+            "startDate": "2024-09-23T00:00:00Z",
+            "endDate": "2025-09-23T00:00:00Z",
+            "status": "all"
+        },
+        "result": [
+            "2024-09-23",
+            "2025-09-23"
+        ],
+        "expectError": false
+    },
+    {
+        "testName": "map request with empty categoriesList and sourcesList field",
+        "request": {
+            "regionId": "southAmerica",
+            "categoriesList": [],
+            "sourcesList": [],
+            "startDate": "2024-09-23T00:00:00Z",
+            "endDate": "2025-09-23T00:00:00Z",
+            "status": "all"
+        },
+        "result": [
+            "2024-09-23",
+            "2025-09-23"
+        ],
+        "expectError": false
+    },
+    {
+        "testName": "map request with missing region field",
+        "request": {
+            "categoriesList": [
+                "severeStorms"
+            ],
+            "sourcesList": [
+                "InciWeb",
+                "EO",
+                "AVO",
+                "JTWC"
+            ],
+            "startDate": "2024-09-23T00:00:00Z",
+            "endDate": "2025-09-23T00:00:00Z",
+            "status": "all"
+        },
+        "result": null,
+        "expectError": true
+    },
+    {
+        "testName": "map request with missing categoriesList field",
+        "request": {
+            "regionId": "southAmerica",
+            "sourcesList": [
+                "InciWeb",
+                "EO",
+                "AVO",
+                "JTWC"
+            ],
+            "startDate": "2024-09-23T00:00:00Z",
+            "endDate": "2025-09-23T00:00:00Z",
+            "status": "all"
+        },
+        "result": null,
+        "expectError": true
+    },
+    {
+        "testName": "map request with invalid sourceList field",
+        "request": {
+            "regionId": "southAmerica",
+            "categoriesList": [
+                "severeStorms"
+            ],
+            "sourcesList": "AVO",
+            "startDate": "2024-09-23T00:00:00Z",
+            "endDate": "2025-09-23T00:00:00Z",
+            "status": "all"
+        },
+        "result": null,
+        "expectError": true
+    },
+    {
+        "testName": "map request with invalid date",
+        "request": {
+            "regionId": "southAmerica",
+            "categoriesList": [
+                "severeStorms"
+            ],
+            "sourcesList": [
+                "AVO"
+            ],
+            "startDate": "invalid-date",
+            "endDate": "invalid-date",
+            "status": "all"
+        },
+        "result": null,
+        "expectError": true
+    },
+    {
+        "testName": "map request with invalid date status",
+        "request": {
+            "regionId": "southAmerica",
+            "categoriesList": [
+                "severeStorms"
+            ],
+            "sourcesList": [
+                "AVO"
+            ],
+            "startDate": "invalid-date",
+            "endDate": "invalid-date",
+            "status": "invalid status"
+        },
+        "result": null,
+        "expectError": true
+    }
+]

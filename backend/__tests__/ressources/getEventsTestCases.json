@@ -1,0 +1,170 @@
+[
+    {
+        "testName": "Get events with success",
+        "mapRequest": {
+            "regionId": "all",
+            "categoriesList": [
+                "wildfires"
+            ],
+            "sourcesList": [
+                "AVO",
+                "GDACS"
+            ],
+            "startDate": "2024-09-25T00:00:00Z",
+            "endDate": "2024-09-30T00:00:00Z",
+            "status": "all"
+        },
+        "nasaRequest": {
+            "start": "2024-09-25",
+            "end": "2024-09-30",
+            "source": "AVO,GDACS",
+            "category": "wildfires",
+            "status": "all"
+        },
+        "nasaResponse": {
+            "status": 200,
+            "body": {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "id": "EONET_11354",
+                            "title": "Wildfire in Brazil 1022427",
+                            "description": null,
+                            "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_11354/geojson",
+                            "closed": null,
+                            "date": "2024-09-25T19:00:00Z",
+                            "magnitudeValue": null,
+                            "magnitudeUnit": null,
+                            "categories": [
+                                {
+                                    "id": "wildfires",
+                                    "title": "Wildfires"
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "id": "GDACS",
+                                    "url": "https://www.gdacs.org/report.aspx?eventtype=WF&amp;eventid=1022427"
+                                }
+                            ]
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -51.2838193149624,
+                                -20.551303821534212
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "id": "EONET_11355",
+                            "title": "Wildfire in Brazil 1022428",
+                            "description": null,
+                            "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_11355/geojson",
+                            "closed": null,
+                            "date": "2024-09-25T19:00:00Z",
+                            "magnitudeValue": null,
+                            "magnitudeUnit": null,
+                            "categories": [
+                                {
+                                    "id": "wildfires",
+                                    "title": "Wildfires"
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "id": "GDACS",
+                                    "url": "https://www.gdacs.org/report.aspx?eventtype=WF&amp;eventid=1022428"
+                                }
+                            ]
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -51.251698187243292,
+                                -20.815634464910133
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "expectedStatus": 200
+    },
+    {
+        "testName": "Get events bad request",
+        "mapRequest": "invalid map request format",
+        "nasaRequest": {
+            "start": "2024-09-25",
+            "end": "2024-09-30",
+            "source": "AVO,GDACS",
+            "category": "wildfires",
+            "status": "all"
+        },
+        "nasaResponse": {
+            "status": 200,
+            "body": {}
+        },
+        "expectedStatus": 400
+    },
+    {
+        "testName": "Get events failed due to external service down",
+        "mapRequest": {
+            "regionId": "all",
+            "categoriesList": [
+                "wildfires"
+            ],
+            "sourcesList": [
+                "AVO",
+                "GDACS"
+            ],
+            "startDate": "2024-09-25T00:00:00Z",
+            "endDate": "2024-09-30T00:00:00Z",
+            "status": "all"
+        },
+        "nasaRequest": {
+            "start": "2024-09-25",
+            "end": "2024-09-30",
+            "source": "AVO,GDACS",
+            "category": "wildfires",
+            "status": "all"
+        },
+        "nasaResponse": {
+            "status": 500,
+            "body": {}
+        },
+        "expectedStatus": 500
+    },
+    {
+        "testName": "Get events failed due to external service returns wrong geojson format",
+        "mapRequest": {
+            "regionId": "all",
+            "categoriesList": [
+                "wildfires"
+            ],
+            "sourcesList": [
+                "AVO",
+                "GDACS"
+            ],
+            "startDate": "2024-09-25T00:00:00Z",
+            "endDate": "2024-09-30T00:00:00Z",
+            "status": "all"
+        },
+        "nasaRequest": {
+            "start": "2024-09-25",
+            "end": "2024-09-30",
+            "source": "AVO,GDACS",
+            "category": "wildfires",
+            "status": "all"
+        },
+        "nasaResponse": {
+            "status": 200,
+            "body": "invalid geojson format"
+        },
+        "expectedStatus": 500
+    }
+]

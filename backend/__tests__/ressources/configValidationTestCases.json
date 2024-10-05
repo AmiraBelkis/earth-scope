@@ -1,0 +1,73 @@
+{
+    "regionsConfig": [
+        {
+            "testName": "valid region config",
+            "config": {
+                "Regions": [
+                    {
+                        "id": "REG_01",
+                        "title": "Region 01",
+                        "coordinates": "-19.570320,-35.424335,56.484361,36.317008"
+                    },
+                    {
+                        "id": "REG_02",
+                        "title": "Region 02",
+                        "coordinates": "-19.570320,-35.424335,56.484361,36.317008"
+                    }
+                ]
+            },
+            "expected": true
+        },
+        {
+            "testName": "Empty region config",
+            "config": {
+                "Regions": []
+            },
+            "expected": true
+        },
+        {
+            "testName": "invalid region config",
+            "config": {
+                "Regions": {}
+            },
+            "expected": false
+        }
+    ],
+    "nasaConfig": [
+        {
+            "testName": "valid NASA config",
+            "endpoint": "categories",
+            "config": {
+                "ApiKey": "AAf23wdknDG45KDFGdlDFD78ksdjbdS12DFD",
+                "Endpoints": {
+                    "categories": "https://api.nasa.gov/api/example/api/categories",
+                    "sources": "https://api.nasa.gov/api/example/api/sources"
+                }
+            },
+            "expected": true
+        },
+        {
+            "testName": "missing NASA api key",
+            "endpoint": "categories",
+            "config": {
+                "Endpoints": {
+                    "categories": "https://api.nasa.gov/api/example/api/categories",
+                    "sources": "https://api.nasa.gov/api/example/api/sources"
+                }
+            },
+            "expected": false
+        },
+        {
+            "testName": "missing endpoint",
+            "endpoint": "events",
+            "config": {
+                "ApiKey": "AAf23wdknDG45KDFGdlDFD78ksdjbdS12DFD",
+                "Endpoints": {
+                    "categories": "https://api.nasa.gov/api/example/api/categories",
+                    "sources": "https://api.nasa.gov/api/example/api/sources"
+                }
+            },
+            "expected": false
+        }
+    ]
+}

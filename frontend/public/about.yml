@@ -1,0 +1,144 @@
+sections:
+  - id: overview
+    title: "Project Overview"
+    content:
+      - type: p
+        value: "The concept behind Earth scope is to create an interactive platform where users can explore natural events such as wildfires, storms, and volcanic activity on a map. The idea is to provide a comprehensive tool that allows users to filter and view events based on various criteria, making it easier to understand and analyze natural phenomena."
+  - id: why_this_project
+    title: "Why This Project?"
+    content:
+      - type: p
+        value: "This project was created as part of a coding challenge to demonstrate my proficiency in full-stack web development. It showcases my ability to handle real-time data, integrate complex APIs, and create interactive user experiences. This project reflects my skills in React and Node.js, and my interest in leveraging technology to provide valuable insights into natural phenomena."
+  - id: nasa_eonet_api
+    title: "NASA EONET API"
+    content:
+      - type: p
+        value: "The NASA Earth Observatory Natural Event Tracker (EONET) API provides access to a dataset of natural events as observed by NASA satellites. This API includes information on various types of events such as wildfires, storms, and volcanic eruptions. Each event is categorized and includes metadata such as the date of occurrence, location, and status (open or closed). This rich dataset allows for the creation of dynamic and informative visualizations."
+  - id: features
+    title: "Features"
+    content:
+      - type: ul
+        children:
+          - type: li
+            children:
+              - type: strong
+                value: "Interactive Map:"
+              - type: span
+                value: "View natural events on a dynamic map interface."
+          - type: li
+            children:
+              - type: strong
+                value: "Date Filtering:"
+              - type: span
+                value: "Filter events by their date of occurrence to see historical data or recent activities."
+          - type: li
+            children:
+              - type: strong
+                value: "Region Filtering:"
+              - type: span
+                value: "Narrow down events by specific regions to focus on areas of interest."
+          - type: li
+            children:
+              - type: strong
+                value: "Category Filtering:"
+              - type: span
+                value: "Explore events by categories such as wildfires, storms, and more."
+          - type: li
+            children:
+              - type: strong
+                value: "Source Filtering:"
+              - type: span
+                value: "Identify events based on their data sources."
+          - type: li
+            children:
+              - type: strong
+                value: "Event Status:"
+              - type: span
+                value: "Check the current status of events, whether they are open or closed."
+          - type: li
+            children:
+              - type: strong
+                value: "Responsive Design:"
+              - type: span
+                value: "The application is fully responsive and can be used on mobile devices through a web browser."
+  - id: how_to_use
+    title: "How to Use the Application"
+    content:
+      - type: ul
+        children:
+          - type: li
+            children:
+              - type: strong
+                value: "Navigate to the Map:"
+              - type: span
+                value: "The homepage features an interactive map displaying various natural events."
+          - type: li
+            children:
+              - type: strong
+                value: "Filter Events:"
+              - type: span
+                value: "Use the filtering options to narrow down events by date, region, category, and source."
+          - type: li
+            children:
+              - type: strong
+                value: "View Event Details:"
+              - type: span
+                value: "Click on an event marker on the map to view detailed information about the event."
+  - id: future_enhancements
+    title: "Future Enhancements"
+    content:
+      - type: ul
+        children:
+          - type: li
+            children:
+              - type: strong
+                value: "Advanced Analytics:"
+              - type: span
+                value: "Provide deeper insights and analytics on the natural events data."
+          - type: li
+            children:
+              - type: strong
+                value: "Custom Region Division:"
+              - type: span
+                value: "Allow users to define their own region divisions for more personalized data analysis."
+          - type: li
+            children:
+              - type: strong
+                value: "Mobile Application:"
+              - type: span
+                value: "Develop a mobile application to provide a seamless experience on smartphones and tablets."
+  - id: technologies_used
+    title: "Technologies Used"
+    content:
+      - type: ul
+        children:
+          - type: li
+            children:
+              - type: strong
+                value: "React:"
+              - type: span
+                value: "For building the user interface."
+          - type: li
+            children:
+              - type: strong
+                value: "Node.js & Express:"
+              - type: span
+                value: "For server-side logic and API integration."
+          - type: li
+            children:
+              - type: strong
+                value: "Leaflet:"
+              - type: span
+                value: "For rendering and interacting with the map."
+          - type: li
+            children:
+              - type: strong
+                value: "Jest & Supertest:"
+              - type: span
+                value: "For creating integration tests."
+          - type: li
+            children:
+              - type: strong
+                value: "Iconify & Bootstrap:"
+              - type: span
+                value: "For UI enhancements."
