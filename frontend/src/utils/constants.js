@@ -5,6 +5,14 @@ export const menuItems = [
     { id: 3, title: 'About', link: '/about', disabled: false },
 ];
 
+export const iconsToLoad = [
+    'mingcute:down-line',
+    'mingcute:up-line',
+    'uil:calender',
+    'jam:alert',
+    'jam:info',
+];
+
 export const statusOption = [
     { value: 'all', label: 'All' },
     { value: 'open', label: 'Open' },

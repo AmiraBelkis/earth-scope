@@ -10,6 +10,7 @@ export const retrieveMapGeoData = (filter) => {
         const fetchData = async (url) => {
             try {
                 setLoading(true);
+                setError(null);
                 const response = await fetch(url, {
                     method: 'Post',
                     headers: {
