@@ -9,8 +9,10 @@ import { MapContext } from './contexts/context'
 import { Route, Routes } from "react-router-dom"
 import { About } from './pages/about/About'
 import { PageNotFound } from './pages/PageNotFound'
+import { loadAppIcons } from './hooks/loadIcons'
 
 function App() {
+  loadAppIcons();
   const [mapFilter, setMapFilter] = useState({
     "regionId": "all",
     "categoriesList": [],
