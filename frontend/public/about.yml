@@ -92,6 +92,12 @@ sections:
           - type: li
             children:
               - type: strong
+                value: "Predict future events using AI:"
+              - type: span
+                value: "Implement a deep learning model to predict future natural events based on historical data and trends, helping users anticipate and prepare for potential occurrences."
+          - type: li
+            children:
+              - type: strong
                 value: "Advanced Analytics:"
               - type: span
                 value: "Provide deeper insights and analytics on the natural events data."
